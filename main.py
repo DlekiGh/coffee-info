@@ -3,10 +3,11 @@ import sqlite3
 
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QMainWindow, QApplication  # for QT app itself
-from PyQt5 import uic  # first time using the thing
+from UI.main_ui import Ui_Form as main_ui
+from UI.addEditCoffeeForm import Ui_Form as edit_add_ui
 
 
-con = sqlite3.connect('coffee.sqlite')
+con = sqlite3.connect('data/coffee.sqlite')
 c = con.cursor()
 
 
@@ -20,11 +21,10 @@ class NoneWithClose:
 
 # aa = QtWidgets.QLineEdit
 
-class EditAddWindow(QMainWindow):
+class EditAddWindow(QMainWindow, edit_add_ui):
     def __init__(self, mode, func_end, elem=0):
         super().__init__()
-
-        uic.loadUi('addEditCoffeeForm.ui', self)
+        super().setupUi(self)
 
         if elem == 0:
             self.id = None
@@ -66,10 +66,10 @@ class EditAddWindow(QMainWindow):
         self.sender().bonded_text = self.sender().text()
 
 
-class GitCoffeeInfo(QMainWindow):
+class GitCoffeeInfo(QMainWindow, main_ui):
     def __init__(self):
         super().__init__()
-        uic.loadUi('main.ui', self)
+        super().setupUi(self)
 
         self.pushButton_edit.clicked.connect(self.edit_open)
         self.pushButton_add.clicked.connect(self.add_open)
