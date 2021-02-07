@@ -25,21 +25,6 @@
   <property name="windowTitle">
    <string>Coffee info</string>
   </property>
-  <widget class="QListWidget" name="coffee_listWidget">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>40</y>
-     <width>701</width>
-     <height>461</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>9</pointsize>
-    </font>
-   </property>
-  </widget>
   <widget class="QLabel" name="header_label">
    <property name="geometry">
     <rect>
@@ -56,6 +41,57 @@
    </property>
    <property name="text">
     <string>ID, название сорта, степень обжарки, молотый/в зернах, описание вкуса, цена, объем упаковки</string>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="tableWidget_coffee">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>30</y>
+     <width>701</width>
+     <height>421</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_add">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>460</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Добавить</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_edit">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>460</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Изменить</string>
    </property>
   </widget>
  </widget>
